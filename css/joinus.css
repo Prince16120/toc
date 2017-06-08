@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+h2{
+font-family:'Raleway';
+}
+p{
+	font-family:'PT Sans';
+	font-size:18px;
+}
+
+.boton{
+    background-color: transparent;
+    border-radius:30px;
+    color: #000;
+	max-width:100%;
+	border:1px solid black;
+	font-size:140%;
+	font-family:'Alegreya Sans';
+}
+.boton:hover{
+    background-color:black;
+    border-color:black;
+    color: #fff; 
+	}
+.boton1{
+    background-color: transparent;
+    border-radius:30px;
+    color: #000;
+	width:70px;
+	font-size:15px;
+	border:1px solid black;
+	font-family:'Alegreya Sans';
+}
+
+.boton1:hover{
+    background-color:black;
+    border-color:black;
+    color: #fff; 
+	}
+::-webkit-input-placeholder {
+  color: black;
+  font-size:20px;
+  }
+  
+
+  @media (min-width: 1150px ) {
+  #back{
+background-image:url("../images/joinus.jpg");
+height:auto;
+width:100%;
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+}
+  
+
+}

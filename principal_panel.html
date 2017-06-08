@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Principal Panel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  	  <link href="images/ireava.png" type="image" rel="shortcut icon">
+  <link rel="stylesheet" href="css/bootstrap.mini.css">
+  <link rel="stylesheet" href="css/panel.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/panel.js"></script>
+ 
+</head>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand upper-color" href="#">iReava</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav" style="float:right">
+        <li><a href="#home" class="hvr-underline-from-center upper-color">Home</a></li>
+        <li><a href="#profile" class="hvr-underline-from-center upper-color" data-toggle="modal" data-target="#profile">Profile</a></li>
+        <li><a href="#logout" class="hvr-underline-from-center upper-color">Logout</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+</div><!--/.navbar -->
+
+<!-- Modal profile-->
+<div id="profile" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Profile Update</h4>
+      </div>
+      <div class="modal-body">
+        <center><div id="circle"></div></center><br>
+        <form action="" class="form">
+            <div class="form-group">
+                  <label for="username">Username: </label>
+                  <input type="text" name="username" id="username" class="form-control" readonly="readonly">
+             </div>
+             <div class="form-group">
+                  <label for="password">Password: </label>
+                  <input type="password" name="password" id="password" class="form-control" >
+             </div>
+             <div class="form-group">
+                  <label for="phone">Phone Number: </label>
+                  <input type="text" name="phone" id="phone" class="form-control">
+              </div>
+             <div class="form-group">
+                  <label for="email">Email ID: </label>
+                  <input type="email" name="email" id="email" class="form-control">
+             </div>
+             <div class="form-group">
+                  <label for="dob">DOB: </label>
+                  <input type="text" name="dob" id="dob" class="form-control">
+            </div>
+			<div class="form-group">
+                  <label for="schoolname">School Name</label>
+                  <input type="text" name="schoolname" id="schoolname" class="form-control" readonly="readonly">
+            </div>
+			<div class="form-group">
+                  <label for="joiningyear">Year Of joining </label>
+                  <input type="text" name="joiningyear" id="joiningyear" class="form-control" readonly="readonly">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--end Modal profile-->
+
+
+<!-- Modal compose-->
+<div id="compose" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Send box</h4>
+      </div>
+      <div class="modal-body">
+        <form action="" class="form">
+            <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" id="username" class="form-control">
+             </div>
+             <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" name="subject" id="subject" class="form-control" >
+             </div>
+             <div class="form-group">
+                  <label for="links">Links </label>
+                  <input type="text" name="links" id="links" class="form-control">
+              </div>
+             <div class="form-group">
+                  <label for="images">Images</label>
+                  <input type="file" name="images" id="images" class="form-control">  
+             </div>
+             <div class="form-group">
+                  <label for="message">Message.. </label>
+                  <textarea name="message" id="message" class="form-control"></textarea>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--end of compose Modal -->
+
+<div class="row-offcanvas row-offcanvas-left">
+  <div id="sidebar" class="sidebar-offcanvas">
+      <div class="col-md-12">
+        <div class="schoolname"><img src="images/login.png" class="img-circle" height="50" width="50"/><span class="schoolname">School name</span></div><hr/>
+		<h3>Mr. Principal</h3>
+        <ul class="nav nav-pills nav-stacked">
+          <li><hr/></li>
+		   <li><button class="btn btn-info sidetext" data-toggle="modal" data-target="#compose"> &nbsp;Compose</button></li>
+          <li><a href="#inbox" data-toggle="tab" class="sidetext"><i class="fa fa-inbox" aria-hidden="true"></i> &nbsp;Inbox</a></li>
+          <li><a href="#faculty" data-toggle="tab" class="sidetext"><i class="fa fa-users" aria-hidden="true"></i> &nbsp;Faculty</a></li>
+          <li><a href="#starred" data-toggle="tab" class="sidetext"><i class="fa fa-star" aria-hidden="true"></i> &nbsp;Starred</a></li>
+          <li><a href="#sendlist" data-toggle="tab" class="sidetext"><i class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Send List</a></li>
+          <li><a href="#notifications" data-toggle="tab" class="sidetext"><i class="fa fa-info-circle"></i> &nbsp;Notifications</a></li>
+          <li><a href="#contactus" data-toggle="tab" class="sidetext"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;Contact us</a></li>
+          <li><a href="#feedback" data-toggle="tab" class="sidetext"><i class="fa fa-comments" aria-hidden="true"></i> &nbsp;Feedback</a></li>
+          <li><a href="#subscription" data-toggle="tab" class="sidetext"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> &nbsp;Subscription</a></li>
+        </ul>
+		<div class="version"><a href="#" class="sidetext">TOC 1.01</a></div>
+      </div>
+  </div>
+  <div class="tab-content">
+  <div class="tab-pane active" id="inbox">
+  <div id="main">
+      <div class="col-md-12">
+      	  <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          <h2></h2>
+          <div class="row"><!--upper header-->
+              <div class="col-md-12"><div class="well" style="background-color:#337AB7;box-shadow:none;">
+			  <div class="row">
+			  <div class="col-md-9">
+			  <button class="btn btn-default"><i class="fa fa-refresh" aria-hidden="true" style="font-size:15px"></i> Refresh</button>
+			  <button class="btn btn-default" style="margin-left:20px"><i class="fa fa-trash-o" aria-hidden="true" style="font-size:15px;"></i> Delete</button>
+				</div>
+			 <div class="col-sm-3 col-md-3 pull-right">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+        </div>
+			</div>
+			  
+			  </div></div><!--end of header-->
+          </div>
+		  
+		  
+		   <div class="row"><!--inbox-->
+              <div class="col-md-12"><div class="well wellfine"><p><em>Sender Name </em>~ <strong> Subject</strong></p>
+			 <a href="#" onclick="myFunction()" class="option"><button class="btn btn-default">&#9662;</button></a>
+			  <div id="myDIV" class="well options wellsize">
+			  <input type="checkbox" value="delete" name="delete">&nbsp;<i class="fa fa-trash-o" aria-hidden="true" style="font-size:15px"></i>
+			   <a id="star" href="#"><i class="fa fa-star-o optionbar" aria-hidden="true" title="star message" style="border-left:1px solid #888;padding-left:5px"></i></a>
+			  <i class="fa fa-reply optionbar" aria-hidden="true" title="reply" style="border-left:1px solid #888;padding-left:5px"></i>
+			  <i class="fa fa-share optionbar" aria-hidden="true" title="forward" style="border-left:1px solid #888;padding-left:5px"></i>
+			  </div>
+			  </div>
+          </div>
+		  </div>
+		  
+      </div>
+  </div>
+</div><!--end of inbox -->
+
+<!--panel 2-->
+  <div class="tab-pane" id="faculty">
+  <div id="main">
+      <div class="col-md-12">
+      	  <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          <h2></h2>
+      <div class="row"><!--upper header-->
+              <div class="col-md-12"><div class="well" style="background-color:#337AB7;box-shadow:none;">
+			  <div class="row">
+			  <div class="col-md-9">
+			  <button class="btn btn-default"><i class="fa fa-refresh" aria-hidden="true" style="font-size:15px"></i> Refresh</button>
+			  <button class="btn btn-default" style="margin-left:20px"><i class="fa fa-paper-plane" aria-hidden="true" style="font-size:15px;"></i> Send to All</button>
+				</div>
+			 <div class="col-sm-3 col-md-3 pull-right">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+        </div>
+			</div>
+			  
+			  </div></div><!--end of header-->
+          </div>
+<div class="row"><!--inbox-->
+              <div class="col-md-12"><div class="well wellfine"><p><em>Faculty name</em></p>
+			 <a href="#" class="option"><button class="btn btn-default">Send</button></a>
+			  </div>
+          </div>
+		  </div>
+	  </div>
+  </div>
+</div><!--end of panel 2 -->
+
+
+<!--panel 3-->
+  <div class="tab-pane" id="starred">
+  <div id="main">
+      <div class="col-md-12">
+      	  <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          <h2></h2>
+          <div class="row"><!--upper header-->
+              <div class="col-md-12"><div class="well" style="background-color:#337AB7;box-shadow:none;">
+			  <div class="row">
+			  <div class="col-md-9">
+			  <button class="btn btn-default"><i class="fa fa-refresh" aria-hidden="true" style="font-size:15px"></i> Refresh</button>
+			  <button class="btn btn-default" style="margin-left:20px"><i class="fa fa-trash-o" aria-hidden="true" style="font-size:15px;"></i> Delete</button>
+				</div>
+			 <div class="col-sm-3 col-md-3 pull-right">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+        </div>
+			</div>
+			  
+			  </div></div><!--end of header-->
+          </div>
+		  
+		  
+		   <div class="row"><!--inbox-->
+              <div class="col-md-12"><div class="well wellfine"><p><em>Message</em></p>
+			 <a href="#" onclick="toggle_visibility('foo');" class="option"><button class="btn btn-default">&#9662;</button></a>
+			  <div id="foo" class="well options wellsize">
+			  <input type="checkbox" value="delete" name="delete">&nbsp;<i class="fa fa-trash-o" aria-hidden="true" style="font-size:15px"></i>
+			   <a id="star" href="#"><i class="fa fa-star-o optionbar" aria-hidden="true" title="star message" style="border-left:1px solid #888;padding-left:5px"></i></a>
+			  <i class="fa fa-reply optionbar" aria-hidden="true" title="reply" style="border-left:1px solid #888;padding-left:5px"></i>
+			  <i class="fa fa-share optionbar" aria-hidden="true" title="forward" style="border-left:1px solid #888;padding-left:5px"></i>
+			  </div>
+			  </div>
+          </div>
+		  </div>
+      </div>
+  </div>
+</div><!--end of panel 3 -->
+
+
+<!--panel 4-->
+  <div class="tab-pane" id="sendlist">
+  <div id="main">
+      <div class="col-md-12">
+      	  <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          <h2></h2>
+          <div class="row"><!--upper header-->
+              <div class="col-md-12"><div class="well" style="background-color:#337AB7;box-shadow:none;">
+			  <div class="row">
+			  <div class="col-md-9">
+			  <button class="btn btn-default"><i class="fa fa-refresh" aria-hidden="true" style="font-size:15px"></i> Refresh</button>
+			  <button class="btn btn-default" style="margin-left:20px"><i class="fa fa-trash-o" aria-hidden="true" style="font-size:15px;"></i> Delete</button>
+				</div>
+			 <div class="col-sm-3 col-md-3 pull-right">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+        </div>
+			</div>
+			  
+			  </div></div><!--end of header-->
+          </div>
+		  
+		  
+		   <div class="row"><!--inbox-->
+              <div class="col-md-12"><div class="well wellfine"><p><em>Message</em></p>
+			 <a href="#" onclick="toggle_visibility('foo');" class="option"><button class="btn btn-default">&#9662;</button></a>
+			  <div id="foo" class="well options wellsize">
+			  <input type="checkbox" value="delete" name="delete">&nbsp;<i class="fa fa-trash-o" aria-hidden="true" style="font-size:15px"></i>
+			   <a id="star" href="#"><i class="fa fa-star-o optionbar" aria-hidden="true" title="star message" style="border-left:1px solid #888;padding-left:5px"></i></a>
+			  <i class="fa fa-reply optionbar" aria-hidden="true" title="reply" style="border-left:1px solid #888;padding-left:5px"></i>
+			  <i class="fa fa-share optionbar" aria-hidden="true" title="forward" style="border-left:1px solid #888;padding-left:5px"></i>
+			  </div>
+			  </div>
+          </div>
+		  </div>
+      </div>
+  </div>
+</div><!--end of panel 4 -->
+
+
+<!--panel 5-->
+  <div class="tab-pane" id="notifications">
+  <div id="main">
+      <div class="col-md-12">
+      	  <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          <h2></h2>
+      <h3><i class="fa fa-info-circle"></i> Notifications</h3><br>
+	  <div class="row">
+	  <div class="col-sm-11 col-md-11">
+	  <form>
+    <div class="form-group">
+      <label for="notification">Update Notification</label>
+      <textarea class="form-control" rows="5" id="notification"></textarea>
+    </div>
+	<button class="btn btn-primary">Submit</button>
+  </form>
+	  </div>
+	  </div><br/><br/>
+      <div class="row">
+        <div class="col-sm-11 col-md-11">
+          <ul class="list-item">
+            <li class="list-group-item list-custom">Notification Number 1<i class="fa fa-times pull-right" aria-hidden="true" title="Delete"></i></li><br>
+          </ul>
+        </div>
+      </div>
+	  </div>
+  </div>
+</div><!--end of panel 5 -->
+
+<!--panel 6-->
+  <div class="tab-pane" id="contactus">
+  <div id="main">
+      <div class="col-md-12">
+          <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          <h2></h2>
+      <p>contact us</p>
+    </div>
+  </div>
+</div><!--end of panel 6 -->
+
+<!--panel 7-->
+  <div class="tab-pane" id="feedback">
+  <div id="main">
+      <div class="col-md-12">
+          <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          <h2></h2>
+      <p>feedback</p>
+    </div>
+  </div>
+</div><!--end of panel 7 -->
+
+<!--panel 8-->
+  <div class="tab-pane" id="subscription">
+  <div id="main">
+      <div class="col-md-12">
+          <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          <h2></h2>
+      <p>Subscription</p>
+    </div>
+  </div>
+</div><!--end of panel 8 -->
+</div>
+</div>
+<script>
+function myFunction() {
+    var x = document.getElementById('myDIV');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+</body>
+</html>
