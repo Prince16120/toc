@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+h1{
+font-family: 'Raleway';
+font-size:69px;	
+}
+.enquire{
+	font-family:'Cabin';
+}
+h3{
+	font-family:'Alegreya Sans'
+}
+span.foothead{
+	color:white;
+	font-family:'Cabin';
+	font-size:20px;
+}
+span.foot{
+	color:white;
+	font-family:'Cabin';
+	font-size:15px;
+	}
+span.foot:hover{
+	color:cyan;
+}
+#tooltip {
+  position: relative;
+}
+
+#tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: transparent;
+    color: #000;
+    opacity:0.7;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -90px;
+}
+#tooltip:hover .tooltiptext {
+    visibility: visible;
+	margin-top:20px;
+	transition: 0.3s;
+}
+
+.boton{
+    background-color: transparent;
+    border-color:black;
+    border-radius:30px;
+    border-style: solid;
+    border-width: 1px;
+    color: #000;
+    height:50px;
+	width:140px;
+	font-size:140%;
+	font-family:'Alegreya Sans';
+
+}
+.boton:hover{
+   background-color:black;
+    color: #fff;
+}
+
+#back{
+background-image:url("../images/background.jpg");
+background-attachment:fixed;
+height:100%;
+width:100%;
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+}
+
+
+@media (min-width: 768px ) {
+  .row {
+      position: relative;
+	  
+  }
+
+  #hone {
+    position:relative;
+    top:100px;
+	
+  }
+  #hthree{
+	    position:relative;
+    top:100px;
+	  
+  }
+  .bottn1{
+	 position:relative;
+    top:150px; 
+	left:-10px;
+  }
+  .bottn2{
+	 position:relative;
+    top:150px; 
+	left:15px;
+  }
+}
+.footer
+{
+max-height:100%;
+  background-color: #333c45;
+}
+#team{
+  padding-top:70px;
+}
+#pawan{
+  transition:1s;
+
+}
+#pawan:hover{
+  border-top: 9px solid #65a6ff;
+}
+.profile{
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+  box-shadow: 3px 3px 5px #888;
+}
+
+#ambuj{
+  transition:1s;
+
+}
+#ambuj:hover{
+  border-top: 9px solid pink;
+}
+
+
+#prince{
+  transition:1s;
+
+}
+#prince:hover{
+  border-top: 9px solid #333c45;
+}
+
+
+.team
+{
+    border-bottom: 5px solid gray;
+}
+
+#about
+{
+    padding-top: 70px;
+}
+
+#contact
+{
+  padding-top: 70px;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.slideInUp{
+	animation-duration:0.5s;
+}
+
+.scroll-top-wrapper {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+	overflow: hidden;
+	text-align: center;
+	z-index: 99999999;
+    background-color: #888;
+	color: #eeeeee;
+	width: 50px;
+	height: 48px;
+	line-height: 48px;
+	right: 30px;
+	bottom: 30px;
+	padding-top: 2px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.scroll-top-wrapper:hover {
+	background-color: #888888;
+}
+.scroll-top-wrapper.show {
+    visibility:visible;
+    cursor:pointer;
+	opacity: 1.0;
+}
+.scroll-top-wrapper i.fa {
+	line-height: inherit;
+}

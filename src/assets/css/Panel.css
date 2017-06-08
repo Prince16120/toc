@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+body,html,.row-offcanvas {
+  height:100%;
+  background-color:rgba(238,238,238,0.1);
+}
+
+body {
+  padding-top: 50px;
+}
+
+
+.fa-reply:hover , .fa-share:hover
+{
+    font-size: 18px;
+}
+
+#circle
+{
+  background-color: #333c45;
+  height:140px;
+  width: 140px;
+  border-radius: 70px;
+}
+
+#sidebar {
+  width: inherit;
+  min-width: 220px;
+  max-width: 220px;
+  background-color:#fff;
+  box-shadow:1px 0px 10px #888;
+  float: left;
+  height:100%;
+  position:relative;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+.sidetext{
+	color:#000;
+	font-family: 'Cabin', sans-serif;
+	font-size:15px;
+}
+#main {
+  height:100%;
+  overflow:auto;
+}
+
+/*
+ * off Canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    width:calc(100% + 220px);
+  }
+    
+  .row-offcanvas-left
+  {
+    left: -220px;
+  }
+
+  .row-offcanvas-left.active {
+    left: 0;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+  }
+}
+div.version{
+	margin:11vh 0vh 0vh 15vh;
+}
+div.version>a{
+text-decoration:none;
+}
+.upper-color{
+	color:white;
+}
+.wellfine{
+	box-shadow:none;
+}
+
+.wellfine:hover{
+background: linear-gradient(to right, blue 0.5%, transparent 0%);
+}
+span.schoolname
+{
+	font-size:18px;
+	margin-left:1vw;
+	}
+div.schoolname{
+	margin-top:3vh;
+}
+
+
+
+.option{
+	margin-top:-7vh;
+	float:right;
+	padding-top:2vh;
+	padding-left:2px;	
+}
+
+.options{
+	display:none;
+}
+.wellsize{
+	float:right;
+}
+
+.optionbar{
+	margin-left:1vw;
+	cursor:pointer;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  padding-left:2vh;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  padding-left:2vh;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  padding-left:2vh;
+}
+:-moz-placeholder { /* Firefox 18- */
+  padding-left:2vh;
+}
+
+ .search{
+	 border-radius:15px;
+	 border:none;
+	 height:4vh;
+ }
+    
+li.list-custom
+{
+  border-left: 5px solid #333c45;
+}
+

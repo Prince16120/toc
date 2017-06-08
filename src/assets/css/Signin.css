@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+h1{
+font-family: 'Raleway';
+font-size:69px;
+top:25px;
+position:relative;
+}
+
+#username{
+	border-radius:65px;
+	color:black;
+	font-size:20px;
+	padding-left:20px; 
+	background-color:transparent;
+	border:1px solid black;
+	box-shadow: 4px 3px 15px 1px #888;
+}
+
+#pass{
+
+	border-radius:65px;
+	color:black;
+	padding-left:20px; 
+	font-size:20px;
+	background-color:transparent;
+	border:1px solid black;
+	box-shadow: 4px 3px 15px 1px #888;
+}
+.boton{
+    background-color: transparent;
+    border-color:black;
+    border-radius:30px;
+    border-style: solid;
+    border-width: 1px;
+    color: #000;
+	width:140px;
+	font-size:140%;
+	font-family:'Alegreya Sans';
+
+}
+.boton:hover{
+   background-color:black;
+    color: #fff;
+}
+
+
+::-webkit-input-placeholder {
+  color: black;
+  font-size:20px;
+}
+:-ms-input-placeholder { 
+ font-size:20px;
+  padding-left:20px; 
+ color: black;
+}
+::-moz-placeholder { 
+  color: black;
+  opacity: 1;
+   font-size:20px;
+}
+:-moz-placeholder { 
+  color: black;
+   font-size:20px;
+  opacity: 1;
+}
+#back{
+background-image:url("../images/background.jpg");
+height:100%;
+width:100%;
+clear:both;
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+}
+
+
